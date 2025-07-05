@@ -1,12 +1,15 @@
 import { app, BrowserWindow } from 'electron';
 import path from 'path';
 
+const isDarwin = process.platform === 'darwin';
+const isWinNix = process.platform === 'win32' || process.platform === 'linux';
+
 const createWindow = () => {
     const win = new BrowserWindow({
         width: 1000,
         height: 700,
-        frame: false,
-        titleBarStyle: 'hidden',
+        frame: isWinNix,
+        titleBarStyle: isDarwin ? 'hidden' : 'default',
         trafficLightPosition: { x: 13, y: 16.5 },
         webPreferences: {
             contextIsolation: true,
@@ -26,4 +29,4 @@ app.whenReady().then(() => {
 
 app.on('window-all-closed', () => {
     if (process.platform !== 'darwin') app.quit();
-})
+});

@@ -50,3 +50,41 @@ html, body {
   height: calc(100% - 32px); 
   width: 100%;
 }
+
+.fake-lights {
+  display: flex;
+  gap: 6px;
+  padding-left: 12px;
+  -webkit-app-region: no-drag;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 32px;
+  align-items: center;
+}
+
+.fake-lights button {
+  width: 14px;
+  height: 14px;
+  border: none;
+  border-radius: 50%;
+  font-size: 10px;
+  background-color: #888;
+  color: black;
+  padding: 0;
+  line-height: 0;
+  cursor: pointer;
+}
+
+#win-min {
+  background-color: #f9c74f; /* yellow-ish */
+}
+
+#win-max {
+  background-color: #90be6d; /* green-ish */
+}
+
+#win-close {
+  background-color: #f94144; /* red-ish */
+  color: white;
+}
