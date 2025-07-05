@@ -7,7 +7,7 @@ const createWindow = () => {
         height: 700,
         frame: false,
         titleBarStyle: 'hidden',
-        trafficLightPosition: { x: 12, y: 16.5 },
+        trafficLightPosition: { x: 13, y: 16.5 },
         webPreferences: {
             contextIsolation: true,
         },
