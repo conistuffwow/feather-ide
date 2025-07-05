@@ -1,0 +1,20 @@
+{
+  "name": "feather",
+  "version": "1.0.0",
+  "main": "dist-electron/main.js",
+  "scripts": {
+    "dev": "concurrently -k \"vite\" \"tsc -p electron --watch\" \"wait-on http://localhost:5173 && electron .\"",
+    "build": "vite build && tsc -p electron",
+    "start": "electron ."
+  },
+  "devDependencies": {
+    "concurrently": "^8.0.0",
+    "electron": "^29.0.0",
+    "typescript": "^5.0.0",
+    "vite": "^5.0.0",
+    "wait-on": "^7.0.0"
+  },
+  "dependencies": {
+    "monaco-editor": "^0.47.0"
+  }
+}
